@@ -12,7 +12,7 @@ title: "创建你的第一个应用"
 
 现在开始运行这个应用. 在 Dart Editor 的 Files 面板内, 选中 **Chapter_01/web/index.html** 文件, 右键, 然后点击 **Run in Dartium**.
 
-> **提示:** 尽管 Angular.dart 的应用可以任何现代浏览器内, 但是现在, 我们推荐你暂时使用 Dartium. [稍后](./09-ch07-deploying-your-app.html), 你将会学习到如何去生成现代浏览器可运行的 JavaScript 文件.
+> **提示:** 尽管 Angular.dart 的应用可以在任何现代浏览器内运行, 但是现在, 我们推荐你暂时使用 Dartium. [稍后](./09-ch07-deploying-your-app.html), 你将会学习到如何去生成现代浏览器可运行的 JavaScript 文件.
 
 Dartium 启动后, 应用成功的运行了. 当你在输入框打字的时候, 输入的所有字符都会显示在标题上.
 
