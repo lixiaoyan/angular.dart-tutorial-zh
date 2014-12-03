@@ -11,3 +11,4 @@ title: "Angular.dart 教程中文翻译"
 ### 目录
 
 - [开始之前...](./01-before-you-begin.html)
+- [Welcome to Angular](./02-welcome-to-angular.html)
