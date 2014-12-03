@@ -14,7 +14,7 @@ title: "开始之前..."
 
 > [www.dartlang.org/tools/editor/](https://www.dartlang.org/tools/editor/)
 
-Dart Editor 除了编辑器外, 同时包含了 Dart SDK 及 Dartium -- 一个内建 Dart VM 的 Chromium 版本. 更多相关信息请查看 [www.dartlang.org/tools/](https://www.dartlang.org/tools/).
+Dart Editor 除了编辑器外, 同时包含了 Dart SDK 及 Dartium --- 一个内建 Dart VM 的 Chromium 版本. 更多相关信息请查看 [www.dartlang.org/tools/](https://www.dartlang.org/tools/).
 
 ### 获取教程中的示例代码
 
