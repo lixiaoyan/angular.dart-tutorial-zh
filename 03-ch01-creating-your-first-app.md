@@ -34,3 +34,45 @@ dependencies:
 transformers:
 - angular
 ```
+
+要在应用里使用 Angular.dart, 你需要将 `angular` 加入进依赖列表. 同时, 你也需要添加 `angular` 变换器 (transformer), 在之后将你的应用转换成 JavaScript 时候 (如 [部署你的应用](./09-ch07-deploying-your-app.html) 中所描述的), 这是非常必要的. `web_components` 这个包为不支持 [Shadow DOM](http://www.w3.org/TR/shadow-dom/) 的旧版浏览器提供了 polyfills. `browser` 这个包帮助那些不支持 Dart 的浏览器切换到应用编译后的 JavaSript 版本.
+
+Dart Editor 会自动下载你的应用依赖的所有包. 如果下载失败了, 或者你更喜欢使用命令行, 你可以手动去安装那些包. 通过 Dart Editor, 你可以使用 **Tools >> Pub Get** 下载. 通过命令行 (在你的应用的根目录下, 并且确保 Dart SDK 在你的 PATH 中), 你可以直接运行 `pub get`.
+
+### 应用的代码
+
+应用的代码被包含在两个文件中:
+
+[index.html](https://github.com/angular/angular.dart.tutorial/blob/master/Chapter_01/web/index.html)
+: 定义了应用的 UI, 并且包含了应用的脚本.
+
+[main.dart](https://github.com/angular/angular.dart.tutorial/blob/master/Chapter_01/web/main.dart)
+: 定义了一个 main() 函数用于初始化和启动应用.
+
+两个文件都在名为 **web** 的子目录下, 与 [pub 包布局规定](http://pub.dartlang.org/doc/package-layout.html)相符.
+
+首先, 让我们来看一下 **index.html**. 注意一下在 `<html>` 元素上额外添加的 `ng-app` 指令.
+
+``` html
+<html ng-app>
+```
+
+这个 `ng-app` 指令告诉了 Angular 哪个元素是应用的根元素. 这个元素内的所有东西都是由 Angular 管理的页面模板的一部分. 除非你有其他的原因只能让 Angular 管理应用的一部分, 否则我们推荐你将 `ng-app` 指令放到 `<html>` 元素上, 因为它是最外层的标签. 这也是当页面上没有找到 `ng-app` 指令时的默认行为.
+
+下一步, 让我们看一下 HTML 里 `<head>` 内的两个 script 标签.
+
+``` html
+<script src="packages/web_components/platform.js"></script>
+<script src="packages/web_components/dart_support.js"></script>
+```
+
+这两个 script 标签会让旧版浏览器支持 Shadow DOM (一个新的 Web 平台特性).
+
+再下一步, 让我们看一下结尾处的两个 script 标签.
+
+``` html
+<script type="application/dart" src="main.dart"></script>
+<script type="text/javascript" src="packages/browser/dart.js"></script>
+```
+
+> **译者注:** 第二个标签上的 `type="text/javascript"` 并不是必须的.
