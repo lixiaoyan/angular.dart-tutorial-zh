@@ -6,6 +6,7 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="http://www.intptr.im/read.css/assets/normalize.css" />
     <link rel="stylesheet" href="http://www.intptr.im/read.css/read.css" />
+    <link rel="stylesheet" href="./default.css" />
     <style>
       .container {
         max-width: 800px;
@@ -21,5 +22,9 @@
     <div class="container read">
       {{ content }}
     </div>
+    <script src="./highlight.min.js"></script>
+    <script>
+      hljs.initHighlighting();
+    </script>
   </body>
 </html>
